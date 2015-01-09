@@ -1,9 +1,11 @@
 var express = require("express");
 var bodyParser = require("body-parser");
+var myModule = require('./myModule');
 
 var app = express();
 
-var data = [];
+// Tämän määrittelee nyt myModule
+//var data = [];
 
 // middleware layers
 app.use('/',express.static(__dirname + '/public'));
@@ -11,16 +13,10 @@ app.use('/',express.static(__dirname + '/public'));
 app.use(bodyParser());
 
 // define routers. must be after middlewares
-app.get('/products', function(req,res){
-    
-    var html = '<ul>';
-    for(var i = 0; i < data.length; i++) {
-        html += '<li>' + data[i].prod_name + ' ' + data[i].price + '</li>';
-    }
-    html += '<ul>';
-    
-    res.send(html);
-});
+app.get('/products', myModule.products);
+//{    
+    // täsä välissä oli ne kamat, jotka nyt myModulessa
+//});
 
 app.get('/add_product', function(req,res){
     res.sendfile('public/add_product.html');
@@ -28,7 +24,7 @@ app.get('/add_product', function(req,res){
 
 app.post('/product_info', function(req,res){
     console.log(req.body.prod_name);
-    data.push(req.body);
+    myModule.data.push(req.body);
     // ohjaa takas etusivulle
     res.redirect('/');
 });
