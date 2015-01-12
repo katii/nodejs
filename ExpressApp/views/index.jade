@@ -4,8 +4,11 @@ block content
   h1= title
   p Welcome to #{name}
   h2(id="myheader",class="test") Testing appending new elements in jade
-  ul 
+  input(type="text", data-type="search", id="test")
+  
+  ul(data-role='listview', data-filter="true", data-input="#test")
     each course in courses
-      li= course
+      li
+        a #{course}
 
   p Number of participants is #{participants}

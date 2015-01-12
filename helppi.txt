@@ -25,6 +25,26 @@ siihen, ei css-tiedostoon.
 Muutettiin index.js ja index.jade tiedostoja. Käynnistä serveri uudelleen
 (npm start), kun .js tiedostoa muutettu.
 
+layout.jade tiedostoon lisättiin jquery mobilen theme koneen linkit.
+
+MongoDB
+Lataa tuolta: http://www.mongodb.org/downloads
+Asenna
+Luo folderti c:/data
+ja c:/data/db
+MongoDB käyttää niitä defaulttina.
+
+Testaa, toimiiko:
+Mene tonne: C:\Program Files\MongoDB 2.6 Standard
+Avaan biniin komentokehote (shift+oikea näppäin...)
+Komentokehotteessa: mongod (sallitteko käytön, joo).
+Aina kun sulkee koneen, mongodb sulkee kans. Käynnistä taustalle ylemmillä ohjeilla.
+
+projektihakemistossa (missä tuo ExpressApp on) npm install mongoose
+		npm install mongodb
+-> bracketsissä näkyy hakemistoina mongoose ja mongodb
+
+
 _______________________________________________________________________________
 
 aikaisemmin viime viikolla
