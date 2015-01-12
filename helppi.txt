@@ -1,0 +1,34 @@
+ma 12.1.2015
+
+Tee hakemisto ExpressApp. Siin‰ hakemistossa alla olevat.
+
+jade engine jotain??
+
+	komentokehoitteessa:
+	npm install -g express-generator
+	express -c stylus
+
+Hakemistossa nyt esim package.json ja app.js. Hakemiston voi avata vaikka 
+Bracketsilla. Tiedosto -> Avaa kansio...
+
+Asentaa dependecyt (tiedostot ja modulit):
+	komentokehoitteessa:
+	npm install
+
+Serverin starttaus
+	npm start
+Nyt localhost:3000 n‰kyy Express title ja teksti.
+
+Tyylit: style.styl ylikirjoittaa tyylin aina, kun k‰ynnist‰‰ serverin. Tee muutoksen 
+siihen, ei css-tiedostoon.
+
+Muutettiin index.js ja index.jade tiedostoja. K‰ynnist‰ serveri uudelleen
+(npm start), kun .js tiedostoa muutettu.
+
+_______________________________________________________________________________
+
+aikaisemmin viime viikolla
+
+	komentokehoitteessa:
+	npm install -g nodemon
+	npm install -g express

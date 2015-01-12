@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{name}
+  h2(id="myheader",class="test") Testing appending new elements in jade
+  ul 
+    each course in courses
+      li= course
+
+  p Number of participants is #{participants}
