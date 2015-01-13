@@ -1,3 +1,9 @@
+ti 13.1.2015
+
+Eilisen harkkaan course.jade
+
+_______________________________________________________________________________
+
 ma 12.1.2015
 
 Tee hakemisto ExpressApp. Siin‰ hakemistossa alla olevat.
@@ -15,9 +21,10 @@ Asentaa dependecyt (tiedostot ja modulit):
 	komentokehoitteessa:
 	npm install
 
-Serverin starttaus
+Serverin starnpm npm ttaus
 	npm start
-Nyt localhost:3000 n‰kyy Express title ja teksti.
+Nyt localhost:3000 n‰kyy Express title ja teksti. Tuo komento lukee package.json tiedoston, joka
+ik‰‰nkuin konffitiedosto. Tai nodemon ./bin/www. Tai muuta package.json filest‰ node nodemoniksi.
 
 Tyylit: style.styl ylikirjoittaa tyylin aina, kun k‰ynnist‰‰ serverin. Tee muutoksen 
 siihen, ei css-tiedostoon.

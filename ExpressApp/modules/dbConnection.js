@@ -23,11 +23,11 @@ var courses = new Schema({
     endingDate:Date
 });
 
-var course = mongoose.model("course", courses);
+var Course = mongoose.model("Course", courses);
 
 exports.addCourse = function(req,res){
     console.log(req.body);
-    var temp = new course({
+    var temp = new Course({
         name:req.body.name,
         duration:req.body.duration,
         description:req.body.description,
@@ -38,10 +38,25 @@ exports.addCourse = function(req,res){
     
     temp.save(function(err){
         if(err){
-            res.render('error',err);
+            console.log("Error");
+            res.render('myerror',{});
         }
         else{
-            res.redirect('/');
+            console.log("All ok");
+            exports.getCourses(req,res);
+        }
+    });
+}
+
+exports.getCourses = function(req,res){
+    console.log("getCourses");
+    Course.find(function(err,data){
+        if(err){
+            res.render("myerror",{});
+        }
+        else{
+            console.log(data);
+            res.render('index',{course_data:data});
         }
     });
 }
