@@ -11,7 +11,7 @@ var data = {
 /* GET home page. */
 router.get('/', function(req, res) {
     res.render('index', data);
-});
+})
 
 router.appendCourse = function(req,res){
     res.render('course',{});

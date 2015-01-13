@@ -12,9 +12,9 @@ mongoose.connect(url, function(err, succ){
     }
 });
 
-var schema = mongoose.Schema;
+var Schema = mongoose.Schema;
 
-var courses = new schema({
+var courses = new Schema({
     name:{type:String,index:{unique:true}},
     duration:Number,
     description:String,
@@ -23,8 +23,25 @@ var courses = new schema({
     endingDate:Date
 });
 
-var course = mongoose.model("Course", courses);
+var course = mongoose.model("course", courses);
 
 exports.addCourse = function(req,res){
     console.log(req.body);
+    var temp = new course({
+        name:req.body.name,
+        duration:req.body.duration,
+        description:req.body.description,
+        participants:req.body.participants,
+        startingDate:new Date(req.body.startDate),
+        endingDate:new Date(req.body.endingDate)
+    });
+    
+    temp.save(function(err){
+        if(err){
+            res.render('error',err);
+        }
+        else{
+            res.redirect('/');
+        }
+    });
 }
