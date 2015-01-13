@@ -13,4 +13,9 @@ router.get('/', function(req, res) {
     res.render('index', data);
 });
 
+router.appendCourse = function(req,res){
+    res.render('course',{});
+}
+
 module.exports = router;
+

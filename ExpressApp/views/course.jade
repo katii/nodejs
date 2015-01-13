@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  h1 Course Information
+  form(action="/addCourse", metho="post")
+    label Course name
+    br
+    input(type="text", name="name")
+    br
+    label Course duration
+    br
+    input(type="text", name="duration")
+    br
+    label Course description
+    br
+    textarea(name="description")
+    br
+    label Number of participants
+    input(type="text", name="participants")
+    br
+    label Starting date
+    br
+    input(type="date", name="startingDate")
+    br
+    label Ending date
+    br
+    input(type="date", name="endingDate")
+    br
+    input(type="submit", value="Send")

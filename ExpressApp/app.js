@@ -25,8 +25,11 @@ app.use(cookieParser());
 app.use(require('stylus').middleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 
+// kun pyyntö tulee '' kontekstiin, kutsu tuota jälkimmäistä
 app.use('/', routes);
+app.use('/appendCourse', routes.appendCourse);
 app.use('/users', users);
+app.use('/addCourse', db.adCourse);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

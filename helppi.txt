@@ -44,6 +44,7 @@ projektihakemistossa (missä tuo ExpressApp on) npm install mongoose
 		npm install mongodb
 -> bracketsissä näkyy hakemistoina mongoose ja mongodb
 
+bin hakemistoossa voi avata konsolin myös komennolle mongo. Aputyökalu.
 
 _______________________________________________________________________________
 
