@@ -11,7 +11,7 @@ mongoose.connect(url, function(err, succ){
         console.log("Nicely connected to " + url);
     }
 });
-
+ 
 var Schema = mongoose.Schema;
 
 var courses = new Schema({
@@ -60,3 +60,24 @@ exports.getCourses = function(req,res){
         }
     });
 }
+
+exports.getCourseInfo = function(req,res){
+    console.log(req.query);
+    Course.findById(req.query.id, function(err,data){
+        if(err){
+            res.render('myerror');
+        }
+        else{
+            res.render('courseinfo', data);
+        }
+    });
+}
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
