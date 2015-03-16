@@ -1,9 +1,24 @@
 extends layout
 
 block content
-  h1(class='header') #{name}
-  p Duration of the course #{duration}
-  p Number of participants #{participants}
-  p Course start date #{startingDate}
-  p Course end date #{endingDate}
-  p Course description #{description}
+  
+  div(data-role="page", id="page1")
+    div(data-role="header")
+      h1(class='header') #{name}
+    div(class='taulu', role="main" class="taulu")
+      table(data-role="table", id="my-table", data-mode="reflow")
+        thead
+          tr
+            th Duration of the course:
+            th Number of participants:
+            th Course start date:
+            th Course end date:
+            th Course description:
+        tbody
+          tr
+            td #{duration}
+            td #{participants}
+            td #{startingDate}
+            td #{endingDate}
+            td #{description}
+        

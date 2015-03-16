@@ -5,3 +5,11 @@ body {
 a {
   color: #00b7ff;
 }
+.header {
+  color: #000080;
+  text-align: left;
+}
+.taulu {
+  border-style: dashed;
+  border-bottom-color: #000080;
+}

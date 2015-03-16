@@ -60,3 +60,12 @@ aikaisemmin viime viikolla
 	komentokehoitteessa:
 	npm install -g nodemon
 	npm install -g express
+
+_______________________________________________________________________________
+
+Edge.js
+
+hakemistossa 
+	node -v			n‰ytt‰‰ version
+	npm install edge	asentaa edgen
+	npm install edge-sql	asentaa tuen SQL serverille
