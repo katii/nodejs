@@ -1,9 +1,7 @@
 extends layout
 
 block content
-  h1 Ruokaaaaa
-  p Tervetuloa
+  h1= title
+  p Welcome to #{title}
   
-  a(href="/newRecipe") Lisää uusi ruokaohje
-  
- 
+  a(href="/addRecipe") Lisää resepti

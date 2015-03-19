@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  h1 Lisää resepti
+  form(action="/appendRecipe", method="post", data-ajax="false")
+    label Nimi
+    br
+    input(type="text", name="nimi")
+    br
+    label Raaka-aineet tarttis lisätä tähän yksittäin eikä tälleen textareana
+    br
+    textarea(name="aineet")
+    br
+    label Valmistus
+    br
+    textarea(name="valmistus")
+    br
+    label Lähde
+    br    
+    input(type="text", name="lahde")
+    br
+    label Lisätty
+    br
+    input(type="date",name="paivays")
+    br
+    br
+    input(type="submit",value="Tallenna")

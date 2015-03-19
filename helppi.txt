@@ -68,6 +68,14 @@ komentokehoitteessa:
 	npm install -g nodemon
 	npm install -g express
 
-npm install -g express-generator
+	npm install -g express-generator
 	express -c stylus
+
+	npm install
+	npm start
+--
+pois user.js ja viittaus siihen (app.js filessä)
+
+npm install mysql
+
 

@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1 Courses
+  p Welcome 
+  h2(id="myheader",class="test") Testing appending new elements in jade
+  input(type='text',data-type='search',id='test')
+  ul(data-role='listview',data-filter='true',data-input='#test')
+    each cource in course_data
+      li 
+        a(href='/course?id=#{cource._id}') #{cource.name}
+  a(href="/appendCourse") Append course info
