@@ -27,6 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/addRecipe', routes.addRecipe);
 app.use('/appendRecipe', db.addRecipe_); 
+app.use('/recipe', db.getRecipes);
 
 
 // catch 404 and forward to error handler

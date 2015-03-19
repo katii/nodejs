@@ -3,5 +3,14 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
-  
+    
   a(href="/addRecipe") Lisää resepti
+  br
+  br
+  br
+  
+  input(type='text', data-type='search', id='test')
+  ul(data-role='listview', data-filter='true', data-filter-placeholder="Etsi ruokia...", data-input='#test', data-inset='true')
+    each kissa in recipe_data
+      li 
+        a(href='/recipe?id=#{kissa._id}') #{kissa.nimi}

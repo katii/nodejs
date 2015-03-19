@@ -24,7 +24,7 @@ var recipes = new Schema({
 });
 
 //var Course = mongoose.model("Course",courses);
-var Recipe = mongoose.model("Recipe",recipes);
+var Recipe = mongoose.model("Recipe", recipes);
 
 exports.addRecipe_ = function(req,res){
     
@@ -58,13 +58,14 @@ exports.getRecipes = function(req,res){
             res.render("myerror",{});
         }
         else{
-            //res.render('index',{recipe_data:data});
+            res.render('index',{recipe_data:data});
         }
     });
 }
 
-exports.getRecipe = function(req,res){
+exports.getRecipeInfo = function(req,res){
 
+    console.log('getRecipeInfo');
     console.log(req.query);
     Recipe.findById(req.query.id,function(err,data)     {
         if(err){
